@@ -1,4 +1,4 @@
-#!/usr/bin/en sh
+#!/usr/bin/env sh
 # Via: https://docs.docker.com/engine/install/ubuntu/
 
 set -e
