@@ -16,9 +16,11 @@ sudo apt-get install \
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
+. /etc/os-release
+
 cat << \
 ------------------------------------------------------------------------------------------------------------------------------------------------- |
-deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable
+deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $UBUNTU_CODENAME stable
 -------------------------------------------------------------------------------------------------------------------------------------------------
 sudo tee /etc/apt/sources.list.d/docker.list
 
