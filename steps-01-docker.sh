@@ -30,7 +30,7 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plu
 # Pakilo ir be šito:
 # sudo service docker start
 
-sudo docker run hello-world
+sudo docker run hello-world | grep --color .
 
 sudo usermod -aG docker $USER
 echo "You're added to Docker group, please relogin"
