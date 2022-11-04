@@ -1,6 +1,8 @@
 #!/usr/bin/en sh
 # Via: https://docs.docker.com/engine/install/ubuntu/
 
+set -e
+
 # Naujame OSe nebuvo jokių paketų, nereikėjo ir išmest:
 # sudo apt-get remove docker docker-engine docker.io containerd runc
 
