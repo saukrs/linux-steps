@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -e                                  # Stop on the 1st error
+
 cd /etc
 sudo git init
 sudo git commit --allow-empty -m "Repository created"
