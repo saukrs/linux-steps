@@ -25,7 +25,7 @@ deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] h
 sudo tee /etc/apt/sources.list.d/docker.list
 
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # Pakilo ir be šito:
 # sudo service docker start
