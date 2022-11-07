@@ -17,3 +17,4 @@ sudo apt install -y tree
 sudo apt install -y elinks
 sudo apt install -y tmux
 sudo apt install -y colordiff
+sudo apt install -y pv
