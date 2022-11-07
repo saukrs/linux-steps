@@ -17,3 +17,6 @@ curl $DOWNLOAD_URLS_PAGE \
 read PKG_URL <&3
 
 curl -N -# -O $PKG_URL
+
+PKG_FILE=`basename $PKG_URL`
+sudo dpkg -i $PKG_FILE
