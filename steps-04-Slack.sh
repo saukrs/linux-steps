@@ -4,4 +4,7 @@
 
 DOWNLOAD_URLS_PAGE="https://slack.com/intl/en-gb/downloads/instructions/ubuntu"
 
-curl $DOWNLOAD_URLS_PAGE | elinks -dump | awk '/deb$/ {print $NF}' | xargs curl -N -# -O
+curl $DOWNLOAD_URLS_PAGE \
+  | elinks -dump \
+  | awk '/deb$/ {print $NF}' \
+  | xargs curl -N -# -O
