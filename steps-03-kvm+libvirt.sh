@@ -6,3 +6,8 @@ sudo apt-get -y install qemu-kvm libvirt-daemon-system libvirt-clients bridge-ut
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
 sudo adduser $USER libvirt-qemu
+
+echo Verifying the installation:
+
+sudo virsh -c qemu:///system list
+systemctl status libvirtd.service
