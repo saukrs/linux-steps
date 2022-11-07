@@ -4,7 +4,16 @@
 
 DOWNLOAD_URLS_PAGE="https://slack.com/intl/en-gb/downloads/instructions/ubuntu"
 
+FIFO=`mktemp -u`
+mkfifo $FIFO
+exec 3<>$FIFO
+rm $FIFO
+
 curl $DOWNLOAD_URLS_PAGE \
   | elinks -dump \
   | awk '/deb$/ {print $NF}' \
-  | xargs curl -N -# -O
+>&3&
+
+read PKG_URL <&3
+
+curl -N -# -O $PKG_URL
