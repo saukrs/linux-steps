@@ -9,5 +9,5 @@ sudo adduser $USER libvirt-qemu
 
 echo Verifying the installation:
 
-sudo virsh -c qemu:///system list
+sudo virsh -c qemu:///system list --all
 systemctl status libvirtd.service
