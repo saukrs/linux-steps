@@ -15,3 +15,4 @@ sudo apt install -y asciinema
 sudo apt install -y git
 sudo apt install -y tree
 sudo apt install -y elinks
+sudo apt install -y tmux
