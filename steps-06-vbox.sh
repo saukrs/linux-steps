@@ -12,3 +12,6 @@ sudo tee /etc/apt/sources.list.d/vbox.list
 
 sudo apt-get update
 sudo apt-get -y install virtualbox-7.0
+
+sudo usermod -aG vboxusers $USER
+echo "You're added to VirtualBox Users group, please relogin"
