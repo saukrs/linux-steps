@@ -18,3 +18,5 @@ sudo apt install -y elinks
 sudo apt install -y tmux
 sudo apt install -y colordiff
 sudo apt install -y pv
+sudo apt install    ipcalc
+sudo apt install    ansible
