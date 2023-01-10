@@ -20,3 +20,4 @@ sudo apt install -y colordiff
 sudo apt install -y pv
 sudo apt install    ipcalc
 sudo apt install    ansible
+sudo apt install    psmisc              # for pstree
