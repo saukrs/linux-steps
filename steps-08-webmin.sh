@@ -15,3 +15,6 @@ cat << \
 deb https://download.webmin.com/download/repository sarge contrib
 -----------------------------------------------------------------
 sudo tee /etc/apt/sources.list.d/webmin.list
+
+sudo apt-get update
+sudo apt-get install -y webmin
