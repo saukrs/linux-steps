@@ -5,3 +5,5 @@
 
 # Set up Webmin (using the official repo).
 # Via: https://doxfer.webmin.com/Webmin/Installation#apt_.28Debian.2FUbuntu.2FMint.29
+
+set -e
