@@ -9,3 +9,9 @@
 set -e
 
 curl -fsSL http://www.webmin.com/jcameron-key.asc | sudo apt-key add -
+
+cat << \
+----------------------------------------------------------------- |
+deb https://download.webmin.com/download/repository sarge contrib
+-----------------------------------------------------------------
+sudo tee /etc/apt/sources.list.d/webmin.list
