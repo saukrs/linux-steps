@@ -29,22 +29,22 @@ WG_ADDR="10.8.0.1/24"
 WG_PORT=51876
 
 cat << \
---------------------------------------------------- |
+---------------------------------------------------------------------- |
 [Interface]
 PrivateKey = $(sudo cat /etc/wireguard/private.key)
 Address = ${WG_ADDR}
 ListenPort = ${WG_PORT}
 SaveConfig = true
----------------------------------------------------
+----------------------------------------------------------------------
 sudo tee /etc/wireguard/wg0.conf
 
 
 # Step 4: ensuring IP packets are forwarded between interfaces
 
 cat << \
---------------------------------------------------- |
+---------------------------------------------------------------------- |
 net.ipv4.ip_forward = 1
----------------------------------------------------
+----------------------------------------------------------------------
 sudo tee /etc/sysctl.d/11-ip_forward.conf | sudo sysctl -p-
 
 
@@ -53,7 +53,7 @@ sudo tee /etc/sysctl.d/11-ip_forward.conf | sudo sysctl -p-
 UPLINK_DEV=$(ip route list default | awk '{ for (i=1; i<=NF; i++) if ($i == "dev") print $(i+1) }')
 
 cat << \
----------------------------------------------------- |
+----------------------------------------------------------------------- |
 PostUp = ufw route allow in on wg0 out on ${UPLINK_DEV}
-----------------------------------------------------
+-----------------------------------------------------------------------
 sudo tee -a /etc/wireguard/wg0.conf
