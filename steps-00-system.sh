@@ -21,3 +21,10 @@ sudo apt install -y pv
 sudo apt install    ipcalc
 sudo apt install    ansible
 sudo apt install    psmisc              # for pstree
+# TODO: Choose between 3-4 variants in future including:
+                  # ncat                    | NMAP netcat reimplementation
+                  # netcat                  | TCP/IP swiss army knife -- transitional package
+                  # netcat-openbsd          | TCP/IP swiss army knife
+                  # netcat-traditional      | TCP/IP swiss army knife
+                  # netrw                   | netcat like tool with nice features to transport files over network
+sudo apt install    netcat-openbsd      # for nc, very useful debugging tool
