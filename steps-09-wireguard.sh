@@ -46,3 +46,12 @@ cat << \
 net.ipv4.ip_forward = 1
 ---------------------------------------------------
 sudo tee /etc/sysctl.d/11-ip_forward.conf | sudo sysctl -p-
+
+
+# Step 5: configuring firewall
+
+cat << \
+--------------------------------------------------- |
+PostUp = ufw route allow in on wg0 out on DEV
+---------------------------------------------------
+sudo tee -a /etc/wireguard/wg0.conf
