@@ -75,3 +75,5 @@ sudo ufw status
 sudo systemctl enable wg-quick@wg0
 # TODO: this fails on OpenVZ (insmod not supported)
 sudo systemctl start wg-quick@wg0
+sudo systemctl status wg-quick@wg0
+# TODO: Detect the error or the conditions and stop / rollback the changes.
