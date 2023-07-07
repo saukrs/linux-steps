@@ -68,3 +68,10 @@ sudo ufw allow OpenSSH
 sudo ufw disable
 sudo ufw enable
 sudo ufw status
+
+
+# Step 6: starting WG service
+
+sudo systemctl enable wg-quick@wg0
+# TODO: this fails on OpenVZ (insmod not supported)
+sudo systemctl start wg-quick@wg0
