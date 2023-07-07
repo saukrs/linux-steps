@@ -17,3 +17,8 @@ wg genkey | sudo tee /etc/wireguard/private.key
 sudo chmod go= /etc/wireguard/private.key
 
 sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public.key
+
+
+# Step 2: choosing the private IP subnet
+
+# 10.8.0.1/24
