@@ -62,3 +62,9 @@ PreDown = ufw route delete allow in on wg0 out on ${UPLINK_DEV}
 PreDown = iptables -t nat -D POSTROUTING -o ${UPLINK_DEV} -j MASQUERADE
 -----------------------------------------------------------------------
 sudo tee -a /etc/wireguard/wg0.conf
+
+sudo ufw allow ${WG_PORT}/udp
+sudo ufw allow OpenSSH
+sudo ufw disable
+sudo ufw enable
+sudo ufw status
