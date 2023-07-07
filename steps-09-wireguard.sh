@@ -37,3 +37,12 @@ ListenPort = ${WG_PORT}
 SaveConfig = true
 ---------------------------------------------------
 sudo tee /etc/wireguard/wg0.conf
+
+
+# Step 4: ensuring IP packets are forwarded between interfaces
+
+cat << \
+--------------------------------------------------- |
+net.ipv4.ip_forward = 1
+---------------------------------------------------
+sudo tee /etc/sysctl.d/11-ip_forward.conf | sudo sysctl -p-
