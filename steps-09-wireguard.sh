@@ -54,6 +54,11 @@ UPLINK_DEV=$(ip route list default | awk '{ for (i=1; i<=NF; i++) if ($i == "dev
 
 cat << \
 ----------------------------------------------------------------------- |
+
 PostUp = ufw route allow in on wg0 out on ${UPLINK_DEV}
+PostUp = iptables -t nat -I POSTROUTING -o ${UPLINK_DEV} -j MASQUERADE
+
+PreDown = ufw route delete allow in on wg0 out on ${UPLINK_DEV}
+PreDown = iptables -t nat -D POSTROUTING -o ${UPLINK_DEV} -j MASQUERADE
 -----------------------------------------------------------------------
 sudo tee -a /etc/wireguard/wg0.conf
