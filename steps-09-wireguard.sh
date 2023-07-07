@@ -21,4 +21,4 @@ sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public
 
 # Step 2: choosing the private IP subnet
 
-# 10.8.0.1/24
+WG_ADDR="10.8.0.1/24"
