@@ -50,8 +50,10 @@ sudo tee /etc/sysctl.d/11-ip_forward.conf | sudo sysctl -p-
 
 # Step 5: configuring firewall
 
+UPLINK_DEV=$(ip route list default | awk '{ for (i=1; i<=NF; i++) if ($i == "dev") print $(i+1) }')
+
 cat << \
---------------------------------------------------- |
-PostUp = ufw route allow in on wg0 out on DEV
----------------------------------------------------
+---------------------------------------------------- |
+PostUp = ufw route allow in on wg0 out on ${UPLINK_DEV}
+----------------------------------------------------
 sudo tee -a /etc/wireguard/wg0.conf
