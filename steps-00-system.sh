@@ -28,3 +28,13 @@ sudo apt install    psmisc              # for pstree
                   # netcat-traditional      | TCP/IP swiss army knife
                   # netrw                   | netcat like tool with nice features to transport files over network
 sudo apt install    netcat-openbsd      # for nc, very useful debugging tool
+
+cat << \
+---------------------------------------------------------------------- |
+# Enable all functions of sysrq:
+
+kernel.sysrq = 1
+
+# See /etc/sysctl.d/10-magic-sysrq.conf for the details.
+----------------------------------------------------------------------
+sudo tee /etc/sysctl.d/98-magic-sysrq-all-fns.conf | sudo sysctl -p-
