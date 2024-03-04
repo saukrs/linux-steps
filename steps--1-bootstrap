@@ -4,3 +4,6 @@
 # SPDX-FileCopyrightText: 2024 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
 # Set up operating environment for further steps (install the essential deps, etc.)
+
+# 0, Fail early:
+set -e
