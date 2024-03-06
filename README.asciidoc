@@ -4,3 +4,10 @@
 = Linux tools for setting up software
 
 (Mostly a sysadmin things)
+
+== Bootstrap the OS setup
+
+Ensure the prerequisite tools (Git, GNU Make) are installed:
+```sh
+curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps--1-bootstrap | sh
+```
