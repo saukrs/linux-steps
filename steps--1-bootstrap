@@ -11,8 +11,9 @@ software () {
     apt -y "$@"
 }
 
-# 0, Fail early:
+# 0, Fail early, be verbose about cmds in execution:
 set -e
+set -x
 
 # 1, Install crucial software:
 software install make git
