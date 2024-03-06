@@ -11,3 +11,24 @@ Ensure the prerequisite tools (Git, GNU Make) are installed:
 ```sh
 curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps--1-bootstrap | sh
 ```
+
+\... or via shortened URLs:
+
+- &nbsp;
+  +++ <sub> +++
+  Via Twitter
+  +++ </sub> +++
+```sh
+curl -L t.co/a4GqgzcBUz | sh
+
+```
+
+- &nbsp;
+  +++ <sub> +++
+  Via inbox.LV
+  +++ <br /> +++
+  &nbsp;
+  (unreliable, may fail when an ad gets inserted)
+  +++ </sub> +++
+```sh
+curl -L inx.lv/mGve | sh
