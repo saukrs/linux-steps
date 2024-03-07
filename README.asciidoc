@@ -13,6 +13,16 @@ Run the top-most script with a remote target pointed in the first argument:
 ./steps-00-init [user@]hostname
 ```
 
+If it's an indirect SSH connection (eg. overlaying another SSH session like a reverse tunnel),
+you may need to have your target described in `~/.ssh/config` in advance.  Eg:
+```
+Host omn.ssh
+    IdentityFile ~/.ssh/id_rsa-saukrs
+    Port 2222
+    ProxyJump vps1128235
+
+```
+
 Eg:
 
 ```sh
