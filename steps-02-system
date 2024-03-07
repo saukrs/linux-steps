@@ -14,7 +14,7 @@ apt install -y tmux
 apt install -y colordiff
 apt install -y pv
 apt install    ipcalc
-apt install    ansible
+#apt install -y ansible              # for automating things
 apt install    psmisc               # for pstree
 # TODO: Choose between 3-4 variants in future including:
              # ncat                    | NMAP netcat reimplementation
