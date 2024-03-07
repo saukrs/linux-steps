@@ -5,6 +5,32 @@
 
 (Mostly a sysadmin things)
 
+== Initialize the remote host
+
+Run the first script in a row with a remote target as the first argument: `./steps-00-init [user@]host`
+
+```sh
+$ ./steps-00-init root@omn.ssh
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/sskras/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@omn.ssh's password:
+Permission denied, please try again.
+root@omn.ssh's password:
+Executing /root/.bashrc
+Executing /root/.bash_functions
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh -o 'StrictHostKeyChecking=accept-new' 'root@omn.ssh'"
+and check to make sure that only the key(s) you wanted were added.
+
+Testing key-based SSH-auth:
+
+Thu Mar  7 12:34:44 PM EET 2024  uid=0(root) gid=0(root) groups=0(root) logged in succesfully on omn
+Thu Mar  7 12:34:44 PM EET 2024  Host summary:  12:34:44 up 8 days, 12:31,  5 users,  load average: 0.00, 0.00, 0.00
+```
+
 == Bootstrap the OS setup
 
 Ensure the prerequisite tools (Git, GNU Make) are installed:

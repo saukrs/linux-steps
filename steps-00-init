@@ -7,3 +7,10 @@
 #
 # Eg. import the initial SSH key so the host can authenticate
 # us and be managed via SSH in a non-interactive way further.
+
+ssh-copy-id -o StrictHostKeyChecking=accept-new $1
+
+echo "Testing key-based SSH-auth:"
+echo
+ssh $1 'echo -e "$(date)  $(id) logged in succesfully on $(hostname)"' 2>/dev/null
+ssh $1 'echo -e "$(date)  Host summary: $(uptime)"' 2>/dev/null
