@@ -25,7 +25,7 @@ apt install    psmisc               # for pstree
 apt install    netcat-openbsd       # for nc, very useful debugging tool
 
 cd /etc
-etckeeper vcs commit -m 'Snapshotting from the script $0' -a
+etckeeper vcs commit -m "Snapshotting from the script $0" -a
 
 cat <<- \
 	---------------------------------------------------------------------- |
