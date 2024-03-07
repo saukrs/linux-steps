@@ -9,7 +9,16 @@
 set -e
 set -x
 
-# Step 1: installing the package
+# Step 1: choosing the essential WG parameters
+
+#WG_ADDR="10.8.0.1/24"
+ WG_ADDR="10.255.8.1/24"
+
+#WG_PORT=51876
+ WG_PORT=51820
+
+
+# Step 2: installing the package
 
 sudo apt update
 sudo apt install    ufw         # Missing on some installations (like Proxmox)
@@ -21,16 +30,7 @@ sudo chmod go= /etc/wireguard/private.key
 sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public.key
 
 
-# Step 2: choosing the private IP subnet
-
-#WG_ADDR="10.8.0.1/24"
- WG_ADDR="10.255.8.1/24"
-
-
 # Step 3: creating WG configuration
-
-#WG_PORT=51876
- WG_PORT=51820
 
 cat << \
 ---------------------------------------------------------------------- |
