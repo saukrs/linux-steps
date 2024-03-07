@@ -13,16 +13,6 @@ Run the top-most script with a remote target pointed in the first argument:
 ./steps-00-init [user@]hostname
 ```
 
-If it's an indirect SSH connection (eg. overlaying another SSH session like a reverse tunnel),
-you may need to have your target described in `~/.ssh/config` in advance.  Eg:
-```
-Host omn.ssh
-    IdentityFile ~/.ssh/id_rsa-saukrs
-    Port 2222
-    ProxyJump vps1128235
-
-```
-
 Eg:
 
 ```sh
@@ -45,6 +35,17 @@ Testing key-based SSH-auth:
 
 Thu Mar  7 12:34:44 PM EET 2024  uid=0(root) gid=0(root) groups=0(root) logged in succesfully on omn
 Thu Mar  7 12:34:44 PM EET 2024  Host summary:  12:34:44 up 8 days, 12:31,  5 users,  load average: 0.00, 0.00, 0.00
+```
+
+If it's an indirect SSH connection (eg. overlaying another SSH session like a reverse tunnel),
+you may need to have your target described in `~/.ssh/config` in advance.
+
+Eg:
+```
+Host omn.ssh
+    IdentityFile ~/.ssh/id_rsa-saukrs
+    Port 2222
+    ProxyJump vps1128235
 ```
 
 == Bootstrap the OS setup
