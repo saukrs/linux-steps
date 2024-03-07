@@ -9,6 +9,7 @@
 set -e
 set -x
 
+
 # Step 1: choosing the essential WG parameters
 
 #WG_ADDR="10.8.0.1/24"
@@ -67,6 +68,8 @@ PreDown = iptables -t nat -D POSTROUTING -o ${UPLINK_DEV} -j MASQUERADE
 -----------------------------------------------------------------------
 sudo tee -a /etc/wireguard/wg0.conf
 
+# TODO: Does ufw necessary need to be present?  Maybe this block should be optional:
+
 sudo ufw allow ${WG_PORT}/udp
 sudo ufw allow OpenSSH
 # Via: https://gist.github.com/rdroro/9988478#ufw
@@ -74,7 +77,7 @@ sudo ufw allow OpenSSH
 sudo ufw default allow FORWARD
 sudo ufw disable
 sudo ufw enable
-sudo ufw status
+sudo ufw status verbose
 
 
 # Step 6: starting WG service
