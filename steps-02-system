@@ -25,6 +25,7 @@ apt install    psmisc               # for pstree
 apt install    netcat-openbsd       # for nc, very useful debugging tool
 
 cd /etc
+etckeeper vcs add .
 etckeeper vcs commit -m "Snapshotting from the script $0" -a
 
 cat <<- \
@@ -36,4 +37,5 @@ cat <<- \
 	# See /etc/sysctl.d/10-magic-sysrq.conf for the details.
 	----------------------------------------------------------------------
     tee /etc/sysctl.d/98-magic-sysrq-all-fns.conf | sudo sysctl -p-
+etckeeper vcs add /etc/sysctl.d/98-magic-sysrq-all-fns.conf
 etckeeper vcs commit -m 'sysctl.d/98-magic-sysrq-all-fns.conf: Enable all functions of sysrq' -a
