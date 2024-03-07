@@ -1,33 +1,33 @@
 #!/usr/bin/env sh
 
-set -e                                  # Stop on the 1st error
+set -e                              # Stop on the 1st error
 
 cd /etc
-sudo git init
-sudo git commit --allow-empty -m "Repository created"
+git init
+git commit --allow-empty -m "Repository created"
 cd
-sudo apt install -y etckeeper           # Log the /etc changes
-
-sudo apt install -y vim
-sudo apt install -y htop iotop-c
-sudo apt install -y traceroute          # for TCP tracing
-sudo apt install -y asciinema
-sudo apt install -y git
-sudo apt install -y tree
-sudo apt install -y elinks
-sudo apt install -y tmux
-sudo apt install -y colordiff
-sudo apt install -y pv
-sudo apt install    ipcalc
-sudo apt install    ansible
-sudo apt install    psmisc              # for pstree
+apt install -y etckeeper            # Log the /etc changes
+									.
+apt install -y vim
+apt install -y htop iotop-c
+apt install -y traceroute           # for TCP tracing
+apt install -y asciinema
+apt install -y git
+apt install -y tree
+apt install -y elinks
+apt install -y tmux
+apt install -y colordiff
+apt install -y pv
+apt install    ipcalc
+apt install    ansible
+apt install    psmisc               # for pstree
 # TODO: Choose between 3-4 variants in future including:
-                  # ncat                    | NMAP netcat reimplementation
-                  # netcat                  | TCP/IP swiss army knife -- transitional package
-                  # netcat-openbsd          | TCP/IP swiss army knife
-                  # netcat-traditional      | TCP/IP swiss army knife
-                  # netrw                   | netcat like tool with nice features to transport files over network
-sudo apt install    netcat-openbsd      # for nc, very useful debugging tool
+             # ncat                    | NMAP netcat reimplementation
+             # netcat                  | TCP/IP swiss army knife -- transitional package
+             # netcat-openbsd          | TCP/IP swiss army knife
+             # netcat-traditional      | TCP/IP swiss army knife
+             # netrw                   | netcat like tool with nice features to transport files over network
+apt install    netcat-openbsd       # for nc, very useful debugging tool
 
 cat << \
 ---------------------------------------------------------------------- |
@@ -37,4 +37,4 @@ kernel.sysrq = 1
 
 # See /etc/sysctl.d/10-magic-sysrq.conf for the details.
 ----------------------------------------------------------------------
-sudo tee /etc/sysctl.d/98-magic-sysrq-all-fns.conf | sudo sysctl -p-
+tee /etc/sysctl.d/98-magic-sysrq-all-fns.conf | sudo sysctl -p-
