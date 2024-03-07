@@ -73,6 +73,9 @@ sudo tee -a /etc/wireguard/wg0.conf
 sudo ufw allow ${WG_PORT}/udp
 sudo ufw allow OpenSSH
 # Via: https://gist.github.com/rdroro/9988478#ufw
+# Allow Proxmox web-UI:
+sudo ufw allow 8006/tcp
+# TODO: What about all other potentially listening ports?
 # Explicitely enable fwd via ufw too:
 sudo ufw default allow FORWARD
 sudo ufw disable
