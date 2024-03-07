@@ -2,6 +2,7 @@
 
 set -e                              # Stop on the 1st error
 
+apt install    sudo
 apt install -y vim
 apt install -y htop iotop-c
 apt install -y traceroute           # for TCP tracing
