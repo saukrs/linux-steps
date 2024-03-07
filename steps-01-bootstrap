@@ -17,3 +17,12 @@ set -x
 
 # 1, Install crucial software:
 software install make git
+
+# 2, Mark start of Git-versioning of /etc:
+cd /etc
+git init
+git commit --allow-empty -m "Directory tracking started."
+cd
+
+# 3, Start logging /etc changes:
+apt install -y etckeeper

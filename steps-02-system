@@ -2,12 +2,6 @@
 
 set -e                              # Stop on the 1st error
 
-cd /etc
-git init
-git commit --allow-empty -m "Repository created"
-cd
-apt install -y etckeeper            # Log the /etc changes
-
 apt install -y vim
 apt install -y htop iotop-c
 apt install -y traceroute           # for TCP tracing
