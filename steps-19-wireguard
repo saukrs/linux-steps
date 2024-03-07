@@ -21,12 +21,14 @@ sudo cat /etc/wireguard/private.key | wg pubkey | sudo tee /etc/wireguard/public
 
 # Step 2: choosing the private IP subnet
 
-WG_ADDR="10.8.0.1/24"
+#WG_ADDR="10.8.0.1/24"
+ WG_ADDR="10.255.8.1/24"
 
 
 # Step 3: creating WG configuration
 
-WG_PORT=51876
+#WG_PORT=51876
+ WG_PORT=51820
 
 cat << \
 ---------------------------------------------------------------------- |
