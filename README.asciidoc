@@ -7,7 +7,13 @@
 
 == Initialize the remote host
 
-Run the first script in a row with a remote target as the first argument: `./steps-00-init [user@]host`
+Run the top-most script with a remote target pointed in the first argument:
+
+```
+./steps-00-init [user@]hostname
+```
+
+Eg:
 
 ```sh
 $ ./steps-00-init root@omn.ssh
