@@ -12,6 +12,7 @@ set -x
 # Step 1: installing the package
 
 sudo apt update
+sudo apt install    ufw         # Missing on some installations (like Proxmox)
 sudo apt install -y wireguard   # Runs DKMS installer
 
 wg genkey | sudo tee /etc/wireguard/private.key
