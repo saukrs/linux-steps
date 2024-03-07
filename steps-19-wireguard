@@ -69,6 +69,9 @@ sudo tee -a /etc/wireguard/wg0.conf
 
 sudo ufw allow ${WG_PORT}/udp
 sudo ufw allow OpenSSH
+# Via: https://gist.github.com/rdroro/9988478#ufw
+# Explicitely enable fwd via ufw too:
+sudo ufw default allow FORWARD
 sudo ufw disable
 sudo ufw enable
 sudo ufw status
