@@ -25,4 +25,4 @@ git commit --allow-empty -m "Directory tracking started."
 cd
 
 # 3, Start logging /etc changes:
-apt install -y etckeeper
+software install etckeeper
