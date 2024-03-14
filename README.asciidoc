@@ -75,3 +75,5 @@ curl -L t.co/kEdmHSC4ZK | sh
   +++ </sub> +++
 ```sh
 curl -L inx.lv/mGfz | sh
+
+```
