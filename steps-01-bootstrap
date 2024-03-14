@@ -7,8 +7,14 @@
 # Via: https://github.com/sskras/.files/blob/3d54677b3461d03a98d0d2cd51ace890d6fcc667/.local/bin/boot-home#L8-L17
 
 software () {
+    # TODO: package manager detection
+
     # On Debian:
-    apt -y "$@"
+    apt -y "$@" \
+    || \
+    # On OpenWRT:
+    opkg "$@"
+
 }
 
 # 0, Fail early, be verbose about cmds in execution:
