@@ -24,6 +24,12 @@ set -x
 # 1, Install crucial software:
 software install make git
 
+# TODO: make sure getaddrinfo() with AI_CANONNAME returns a name with domain
+# Eg. by making /etc/resolv.conf to include `search lan` or other DN.
+#
+# Otherwise git is angry:
+#    fatal: unable to auto-detect email address (got 'root@OpenMPTCProuter.(none)')
+
 # 2, Mark start of Git-versioning of /etc:
 cd /etc
 git init
