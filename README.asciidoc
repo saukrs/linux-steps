@@ -52,7 +52,7 @@ Host omn.ssh
 
 Ensure the prerequisite tools (Git, GNU Make) are installed:
 ```sh
-curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps--1-bootstrap | sh
+curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-bootstrap | sh
 ```
 
 \... or via shortened URLs:
@@ -62,7 +62,7 @@ curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps--1-boots
   Via Twitter
   +++ </sub> +++
 ```sh
-curl -L t.co/a4GqgzcBUz | sh
+curl -L t.co/kEdmHSC4ZK | sh
 
 ```
 
@@ -74,4 +74,4 @@ curl -L t.co/a4GqgzcBUz | sh
   (unreliable, may fail when an ad gets inserted)
   +++ </sub> +++
 ```sh
-curl -L inx.lv/mGve | sh
+curl -L inx.lv/mGfz | sh
