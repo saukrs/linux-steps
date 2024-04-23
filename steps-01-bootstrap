@@ -12,8 +12,11 @@ software () {
     # On Debian:
     apt -y "$@" \
     || \
+    # On CentOS Stream (RHEL 9.x):
+    dnf -y "$@" \
+    || \
     # On OpenWRT:
-    opkg "$@"
+    opkg "$@" \
 
 }
 
