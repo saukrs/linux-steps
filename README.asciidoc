@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BlueOak-1.0.0
 // SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
-= Linux tools for setting up software
+= Linux OS setup in separate Steps
 
 (Mostly a sysadmin things)
 
@@ -52,12 +52,12 @@ Host omn.ssh
 
 Eg. ensure the OS configuration gets tracked via **etckeeper** by the `root`:
 ```sh
-curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-bootstrap | sh
+curl -s https://raw.githubusercontent.com/saukrs/linux-steps/main/steps-01-bootstrap | sh
 ```
 
 Or ensure your prerequisite tools (eg. Git, Rsync, GNU Make) are installed by a _sudoer_:
 ```sh
-curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-bootstrap | sudo sh -s git rsync make
+curl -s https://raw.githubusercontent.com/saukrs/linux-steps/main/steps-01-bootstrap | sudo sh -s git rsync make
 ```
 +++ <sup> +++
 (works even with a password prompt, although its' message disappears)
@@ -71,8 +71,8 @@ curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-boots
   Via Twitter
   +++ </sub> +++
 ```sh
-curl -L t.co/kEdmHSC4ZK | sh
-curl -L t.co/kEdmHSC4ZK | sudo sh -s git make
+curl -L t.co/UIgzvkqDI4 | sh
+curl -L t.co/UIgzvkqDI4 | sudo sh -s git make
 
 ```
 
@@ -84,7 +84,7 @@ curl -L t.co/kEdmHSC4ZK | sudo sh -s git make
   (unreliable, may fail when an ad gets inserted)
   +++ </sub> +++
 ```sh
-curl -L inx.lv/mGfz | sh
-curl -L inx.lv/mGfz | sudo sh -s git make
+curl -L inx.lv/JAx5K | sh
+curl -L inx.lv/JAx5K | sudo sh -s git make
 
 ```
