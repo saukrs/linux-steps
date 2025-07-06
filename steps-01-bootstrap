@@ -20,11 +20,11 @@ software () {
 
 }
 
-# 0, Fail early, be verbose about cmds in execution:
+# 00. Fail early, be verbose about cmds in execution:
 set -e
 set -x
 
-# 1, Check if any arguments are passed to the script:
+# 10. Check if any arguments are passed to the script:
 if [ $# -gt 0 ]; then
 
     # 2, Install packages by the passed names:
@@ -32,7 +32,7 @@ if [ $# -gt 0 ]; then
     exit 0
 fi
 
-# 1, Install crucial software:
+# 20. Install crucial software:
 software install git
 
 # TODO: make sure getaddrinfo() with AI_CANONNAME returns a name with domain
@@ -41,11 +41,11 @@ software install git
 # Otherwise git is angry:
 #    fatal: unable to auto-detect email address (got 'root@OpenMPTCProuter.(none)')
 
-# 2, Mark start of Git-versioning of /etc:
+# 30. Mark start of Git-versioning of /etc:
 cd /etc
 git init
 git commit --allow-empty -m "Directory tracking started."
 cd
 
-# 3, Start logging /etc changes:
+# 40. Start logging /etc changes:
 software install etckeeper
