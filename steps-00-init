@@ -19,3 +19,5 @@ echo "Testing key-based SSH-auth:"
 echo
 ssh $1 'echo -e "$(date)  $(id) logged in succesfully on $(hostname)"' 2>/dev/null
 ssh $1 'echo -e "$(date)  Host summary: $(uptime)"' 2>/dev/null
+echo
+ssh $1 sh -xs < steps-01-bootstrap
