@@ -35,6 +35,17 @@ fi
 # 20. Install crucial software:
 software install git
 
+# 25. Check /etc for existing versioning:
+
+if [ -d /etc/.git ]; then
+    set +x
+    echo
+    echo "  /etc/.git found -- seems like the OS is already being versioned."
+    echo "  TODO: unsure about how to proceed, stopping. Please investigate."
+    echo
+    exit 1
+fi
+
 # TODO: make sure getaddrinfo() with AI_CANONNAME returns a name with domain
 # Eg. by making /etc/resolv.conf to include `search lan` or other DN.
 #
