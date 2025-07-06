@@ -50,10 +50,18 @@ Host omn.ssh
 
 == Bootstrap the OS setup
 
-Ensure the prerequisite tools (Git, GNU Make) are installed:
+Eg. ensure the OS configuration gets tracked via **etckeeper**:
 ```sh
 curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-bootstrap | sh
 ```
+(by the `root`)
+
+Or ensure your prerequisite tools (eg. Git, Rsync, GNU Make) are installed:
+```sh
+curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-bootstrap | sudo sh -s git rsync make
+```
+(by a sudoer; works even with a password prompt, although its' message disappears)
+
 
 \... or via shortened URLs:
 
@@ -63,6 +71,7 @@ curl -s https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-boots
   +++ </sub> +++
 ```sh
 curl -L t.co/kEdmHSC4ZK | sh
+curl -L t.co/kEdmHSC4ZK | sudo sh -s git make
 
 ```
 
@@ -75,5 +84,6 @@ curl -L t.co/kEdmHSC4ZK | sh
   +++ </sub> +++
 ```sh
 curl -L inx.lv/mGfz | sh
+curl -L inx.lv/mGfz | sudo sh -s git make
 
 ```
