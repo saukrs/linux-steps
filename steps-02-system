@@ -1,5 +1,11 @@
 #! /usr/bin/env sh
 
+# SPDX-License-Identifier: BlueOak-1.0.0
+# SPDX-FileCopyrightText: 2022-2025 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
+
+# Make sure the essential sysadm tools are present.
+# -----------------------------------------------------------------------------------------
+
 set -e                              # Stop on the 1st error
 set -x                              # Be verbose
 
@@ -8,7 +14,6 @@ apt install -y vim
 apt install -y htop iotop-c
 apt install -y traceroute           # for TCP tracing
 apt install -y asciinema
-apt install -y git
 apt install -y tree
 apt install -y elinks
 apt install -y tmux
