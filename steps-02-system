@@ -6,10 +6,10 @@
 # Make sure the essential sysadm tools are present.
 # -----------------------------------------------------------------------------------------
 
-# 10. Fail early:
+# 10. Fail early, be verbose:
 
 set -e
-set -x                              # Be verbose
+set -x
 
 # 20. Prepare for the new changes:
 
