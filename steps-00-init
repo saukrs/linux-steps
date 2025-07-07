@@ -40,6 +40,11 @@ ssh $1 'echo "$(date)  Host summary: $(uptime)"' 2>/dev/null
 echo
 ssh $1 "$(cat steps-01-bootstrap)"
 
+# 40. The essential tools and system-wide configuration:
+
+echo
+ssh $1 "$(cat steps-02-system)"
+
 # 99. Finished:
 
 echo "The script succeeded."
