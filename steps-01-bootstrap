@@ -3,8 +3,11 @@
 # SPDX-License-Identifier: BlueOak-1.0.0
 # SPDX-FileCopyrightText: 2024, 2025 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
-# Set up operating environment for further steps (install the essential deps, etc.)
+# Set up operating environment for further steps (install Git, start versioning /etc)
+#     OR simply install packages listed as args.
+#
 # Via: https://github.com/sskras/.files/blob/3d54677b3461d03a98d0d2cd51ace890d6fcc667/.local/bin/boot-home#L8-L17
+# ---------------------------------------------------------------------------------------------------------------
 
 software () {
     # TODO: package manager detection
