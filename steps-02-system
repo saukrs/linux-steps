@@ -6,14 +6,16 @@
 # Make sure the essential sysadm tools are present.
 # -----------------------------------------------------------------------------------------
 
-# 10.
+# 10. Fail early:
 
-set -e                              # Stop on the 1st error
+set -e
 set -x                              # Be verbose
 
 # 20. Prepare for the new changes:
 
 etckeeper commit "saving uncommitted changes in /etc prior to ./steps-02-system"
+
+# 30. Install tools one by one:
 
 apt install    sudo
 apt install -y vim
@@ -36,9 +38,13 @@ apt install    psmisc               # for pstree
              # netrw                   | netcat like tool with nice features to transport files over network
 apt install    netcat-openbsd       # for nc, very useful debugging tool
 
+# 40. Commit the new changes:
+
 cd /etc
 etckeeper vcs add .
 etckeeper vcs commit -m "Snapshotting from the script $0" -a
+
+# 50. Enable the "Magic SysRq" key:
 
 cat <<- \
 	---------------------------------------------------------------------- |
@@ -51,3 +57,5 @@ cat <<- \
     tee /etc/sysctl.d/98-magic-sysrq-all-fns.conf | sudo sysctl -p-
 etckeeper vcs add /etc/sysctl.d/98-magic-sysrq-all-fns.conf
 etckeeper vcs commit -m 'sysctl.d/98-magic-sysrq-all-fns.conf: Enable all functions of sysrq' -a
+
+# 99. Finished.
