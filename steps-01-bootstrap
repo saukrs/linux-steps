@@ -38,6 +38,13 @@ fi
 
 software install git
 
+# 21. Confirm interactively to continue:
+
+echo
+echo Press ENTER to continue the bootstrapping...
+echo
+read REPLY
+
 # 25. Check /etc for existing versioning:
 
 if [ -d /etc/.git ]; then
