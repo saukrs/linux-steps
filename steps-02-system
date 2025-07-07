@@ -6,8 +6,14 @@
 # Make sure the essential sysadm tools are present.
 # -----------------------------------------------------------------------------------------
 
+# 10.
+
 set -e                              # Stop on the 1st error
 set -x                              # Be verbose
+
+# 20. Prepare for the new changes:
+
+etckeeper commit "saving uncommitted changes in /etc prior to ./steps-02-system"
 
 apt install    sudo
 apt install -y vim
