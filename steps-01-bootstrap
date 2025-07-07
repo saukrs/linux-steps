@@ -77,3 +77,8 @@ cd
 # 40. Start logging /etc changes:
 
 software install etckeeper
+
+# 50. Ignore the inner mounted FSes that break Git change detection.
+# Eg. symlinks inside /etc/pve mounted as pmxcfs.
+
+echo "TODO: Research and fix /etc/pve status"
