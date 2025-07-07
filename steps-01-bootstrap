@@ -82,3 +82,15 @@ software install etckeeper
 # Eg. symlinks inside /etc/pve mounted as pmxcfs.
 
 echo "TODO: Research and fix /etc/pve status"
+
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git restore <file>..." to discard changes in working directory)
+#         modified:   pve/local
+#         modified:   pve/lxc
+#         modified:   pve/openvz
+#         modified:   pve/qemu-server
+# 
+# no changes added to commit (use "git add" and/or "git commit -a")
+# warning: etckeeper failed to commit changes in /etc using git
