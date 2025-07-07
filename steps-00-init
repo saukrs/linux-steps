@@ -13,6 +13,17 @@
 
 set -e
 
+# 04. Exit handler:
+
+trap '
+    Exit_code=$?
+
+    echo
+    echo "The script failed: ${Exit_code}"
+
+' EXIT
+# Via: https://unix.stackexchange.com/questions/520035/exit-trap-with-posix/520041#520041
+
 # 10. Import the current/configured SSH key:
 
 ssh-copy-id -o StrictHostKeyChecking=accept-new $1
@@ -28,3 +39,7 @@ ssh $1 'echo "$(date)  Host summary: $(uptime)"' 2>/dev/null
 
 echo
 ssh $1 "$(cat steps-01-bootstrap)"
+
+# 99. Finished:
+
+echo "The script succeeded."
