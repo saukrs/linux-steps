@@ -42,7 +42,9 @@ apt install    netcat-openbsd       # for nc, very useful debugging tool
 
 cd /etc
 etckeeper vcs add .
-etckeeper vcs commit -m "Snapshotting from the script $0" -a
+etckeeper vcs commit -m "Snapshotting from the script $0" -a || true
+
+: Currently should be none.
 
 # 50. Enable the "Magic SysRq" key:
 
